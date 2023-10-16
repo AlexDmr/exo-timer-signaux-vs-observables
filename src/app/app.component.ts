@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TimerSignalService } from './timer-signal.service';
+import { TimerObservableRxjsService } from './timer-observable-rxjs.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'exo-timer-signaux-vs-observables';
+  constructor(
+    public timerSig: TimerSignalService,
+    public timerObs: TimerObservableRxjsService
+  ) {
+  }
 }
